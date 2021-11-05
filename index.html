@@ -17,11 +17,15 @@
         <h2>THE DESIGN SHOP</h2>
         <ul>
           <li>Weekly Recommendations</li>
-          <li onclick="toContact()">Contact</li>
+          <li onclick="javascript:toContact()">Contact</li>
           <li>T D B</li>
         </ul>
       </nav>
-      <section onclick="openMenu()" class="hamburgerMenu" id="openMenu">
+      <section
+        onclick="javascript:openMenu()"
+        class="hamburgerMenu"
+        id="openMenu"
+      >
         <span></span>
         <span></span>
         <span></span>
@@ -29,9 +33,9 @@
       <article class="overlay" id="overlay">
         <ul>
           <li>Weekly Recommendations</li>
-          <li onclick="toContactMobile()">Contact</li>
+          <li onclick="javascript:toContactMobile()">Contact</li>
           <li>T D B</li>
-          <li onclick="closeMenu()"><i class="fas fa-times"></i></li>
+          <li onclick="javascript:closeMenu()"><i class="fas fa-times"></i></li>
         </ul>
       </article>
     </header>
@@ -379,13 +383,13 @@
           />
           <textarea name="message" id="message" cols="30" rows="10"></textarea>
         </div>
-        <button onclick="sendMessage()">Send</button>
+        <button onclick="javascript:sendMessage()">Send</button>
       </section>
       <article id="messageSent" class="hide">
         <h2>Thanks, we've received your message!</h2>
         <p>We'll get back to you in the next 24 hours.</p>
         <!-- <p>Confirm to receive our newest news(?!)</p> -->
-        <button onclick="closeWindow()">Close</button>
+        <button onclick="javascript:closeWindow()">Close</button>
       </article>
     </main>
     <footer id="footer">
