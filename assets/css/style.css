@@ -1,0 +1,289 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Karla;
+    scroll-behavior: smooth;
+}
+
+img{
+    width: 100%;
+    transition: 2s ease;
+}
+
+img:hover{
+    transition: 2s ease;
+    opacity: .5;
+}
+
+.gridSectionTwo{
+    display:none;
+}
+
+/* ==== HEADER ==== */
+
+header nav{
+    display: flex;
+    justify-content: space-between;
+    padding: 2%;
+    align-items: center;
+}
+
+header h2{
+    padding-left: 3.5%;
+}
+
+header nav ul{
+    display: flex;
+    list-style: none;
+    width: 50%;
+    justify-content: flex-end;
+    padding-right: 2%;
+}
+
+header nav ul li{
+    padding: 2%;
+}
+
+header nav ul li:hover, header nav h2:hover{
+    color: #999;
+    cursor: pointer;
+}
+
+/* ==== MAIN ==== */
+
+.gridSection{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin: 0 5%;
+    gap: 35px;
+}
+
+.kankenArt, .dieter, .deskLamp, .graphicDesign, .bottleGrinder{
+    grid-column: 1/4;
+}
+
+.flex{
+    display: flex;
+    justify-content: space-between;
+}
+
+main p{
+    color: rgb(49,57,70);
+}
+
+main span{
+    color: rgb(170,170,170);
+}
+
+
+/* ==== FOOTER ==== */
+
+table{
+    padding: 5% 0 0 5%;
+    text-align: left;
+    width: 100%;
+    line-height: 30px;
+}
+
+table th{
+    padding: 0 0 2% 0;
+}
+
+table tr td:first-of-type{
+    width: 32.5%;
+}
+
+.tWidth{
+    width: 25%;
+}
+
+.tWidth1{
+    width: 15%;
+}
+
+footer nav ul{
+    display: flex;
+    list-style:none;
+    padding: 3% 0 1.5% 5%;
+    color: rgb(170,170,170);
+}
+
+footer nav ul li:nth-of-type(1){
+    padding: 0 1% 0 0;
+}
+
+footer a{
+    text-decoration: none;
+    color: #000;
+}
+
+/* ==== HAMBURGER MENU ==== */
+
+.hamburgerMenu{
+    display: none;
+}
+
+.overlay{
+    display: none;
+}
+
+/* ==== CONTACT ==== */
+
+#contact{
+    text-align: center;
+    border: 1px solid black;
+    margin: 5% 30%;
+    padding: 1% 0;
+    font-family: Graphik-Regular;
+}
+
+#contact h2{
+    padding: 0 0 5% 0;
+}
+
+#contact p{
+    padding: 0 0 3% 0;
+}
+
+#contact div input{
+    padding: 1% 3%;
+    text-align: center;
+    display: block;
+    margin: 3% auto;
+}
+
+#contact div textarea{
+    width: 70%;
+    padding: 0% 0;
+    font-family: Graphik-Regular;
+    text-align: center;
+}
+
+#contact button{
+    margin: 5% 0 0 0;
+    padding: 2% 7%;
+    background-color: transparent;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+
+#contact button:hover{
+    background-color: black;
+    color: #fff;
+    transition: .2s linear;
+}
+
+#messageSent{
+    text-align: center;
+    border: 1px solid black;
+    margin: 5% 30%;
+    padding: 1% 0;
+    font-family: Graphik-Regular;
+}
+
+#messageSent h2{
+    padding: 0 0 3% 0;
+}
+
+#messageSent button{
+    margin: 5% 0 0 0;
+    padding: 2% 7%;
+    background-color: transparent;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+
+#messageSent button:hover{
+    background-color: black;
+    color: #fff;
+    transition: .2s linear;
+}
+
+.hide{
+    display: none;
+}
+
+.show{
+    display: visible;
+}
+
+/* Mediaqueries */
+
+@media only screen and (max-width: 600px){
+    .gridSection{
+        display: grid;
+        grid-template-columns: 1fr;
+        padding: 0 0 5% 0;
+    }
+    .kankenArt, .dieter, .deskLamp, .graphicDesign, .bottleGrinder{
+        grid-column: 1/2;
+    }
+    .tableColumn{
+        display:none;
+    }
+    .gridSectionTwo{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 25px;
+        margin: 2% 5%;
+        padding: 3% 0 0 0;
+        border-top: 1px solid #666;
+    }
+    .footerPadding{
+        padding: 0 0 0 35%;
+    }
+    /* Mobile Menu */
+    header nav ul{
+        display: none;
+    }
+    .hamburgerMenu{
+        display: block;
+    }
+    .hamburgerMenu span{
+        display: block;
+        height: 5px;
+        width: 30px;
+        margin: 5px 30px 5px 5px;
+        background-color: black;
+    }
+    header{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    header h2{
+        width: 300px;
+    }
+    .overlay{
+        position: absolute;
+        width: 100%;
+        top: 0;
+        bottom: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background:silver;
+        height: 0%;
+        opacity: 0;
+        transition: 0.5s ease;
+    }
+    .overlay ul{
+        text-align: center;
+        list-style: none;
+    }
+    .overlay ul li{
+        margin: 20px 0;
+        font-size: 38px;
+        padding: 2% 0;
+    }
+    #contact{
+        margin: 0 10%;
+        padding: 0 0 3% 0;
+    }
+    #messageSent{
+        margin: 10% 3%;
+    }
+}
