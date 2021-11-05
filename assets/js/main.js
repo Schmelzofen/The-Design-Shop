@@ -42,3 +42,10 @@ function closeWindow(){
     messageSent.classList.remove("show")
     messageSent.classList.add("hide")
 }
+
+function toContactMobile(){
+    contact.classList.remove("hide")
+    contact.classList.add("show")
+    contact.scrollIntoView()
+    overlay.style.opacity = "0"
+}
