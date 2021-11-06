@@ -15,31 +15,22 @@
     <header>
       <nav>
         <h2>THE DESIGN SHOP</h2>
-        <ul>
+        <ul id="desktopHeader">
           <li>Weekly Recommendations</li>
-          <li onclick="javascript:toContact()">Contact</li>
+          <a href="#contact" onclick="toContactDesktop()">Contact</a>
           <li>T D B</li>
         </ul>
+        <p id="mobileMenu" class="rotate" onclick="toggleMenu()">
+          <i class="fas fa-chevron-left fa-2x"></i>
+        </p>
       </nav>
-      <section
-        onclick="javascript:openMenu()"
-        class="hamburgerMenu"
-        id="openMenu"
-      >
-        <span></span>
-        <span></span>
-        <span></span>
-      </section>
-      <article class="overlay" id="overlay">
-        <ul>
-          <li>Weekly Recommendations</li>
-          <li onclick="javascript:toContactMobile()">Contact</li>
-          <li>T D B</li>
-          <li onclick="javascript:closeMenu()"><i class="fas fa-times"></i></li>
-        </ul>
-      </article>
+      <div id="mobileMenuList" class="flex show">
+        <a href="#">Weekly Recommendations</a>
+        <a href="#contact" onclick="toContactMobile()">Contact</a>
+        <a href="#">T D B</a>
+      </div>
     </header>
-    <main id="main">
+    <main>
       <section class="gridSection">
         <div class="kankenArt">
           <a href="https://amzn.to/32MmHgL"
@@ -51,6 +42,7 @@
           </div>
           <span>Fjallraven</span>
         </div>
+
         <div class="swingArm">
           <a href="https://amzn.to/2WX7vtD"
             ><img src="./assets/img/d2.png" alt="Lampe"
@@ -61,6 +53,7 @@
           </div>
           <span>Tomons</span>
         </div>
+
         <div class="hajo">
           <a href="https://amzn.to/2I3WvXM"
             ><img src="./assets/img/u6.png" alt="Hajo"
@@ -71,6 +64,7 @@
           </div>
           <span>Ucon Acrobatics</span>
         </div>
+
         <div class="bamboo">
           <a href="https://amzn.to/2YX3043"
             ><img src="./assets/img/u10.png" alt="Longboard"
@@ -81,6 +75,7 @@
           </div>
           <span>Retrospec</span>
         </div>
+
         <div class="kettle">
           <a href="https://amzn.to/2KfP3ee"
             ><img src="./assets/img/u9.png" alt=""
@@ -91,6 +86,7 @@
           </div>
           <span>Fellow</span>
         </div>
+
         <div class="woodenCar">
           <a href="https://amzn.to/2FYB3zT"
             ><img src="./assets/img/h17.png" alt="woodenCar"
@@ -101,6 +97,7 @@
           </div>
           <span>Candylab Toys</span>
         </div>
+
         <div class="redBook">
           <a
             href="https://www.bookdepository.com/Logo-Modernism-Jens-Muller-R-Roger-Remington/9783836545303/?a_aid=1991"
@@ -112,6 +109,7 @@
           </div>
           <span>Taschen</span>
         </div>
+
         <div class="dieter">
           <a href="https://amzn.to/2YQLnCV"
             ><img src="./assets/img/d7.png" alt="Book"
@@ -122,6 +120,7 @@
           </div>
           <span>Sophie Lovell</span>
         </div>
+
         <div class="eye">
           <a href="https://amzn.to/2I3lbQ7"
             ><img src="./assets/img/c6.png" alt="TheEye"
@@ -132,6 +131,7 @@
           </div>
           <span>Nathan Williams</span>
         </div>
+
         <div class="organizer">
           <a href="https://amzn.to/2IifSvA"
             ><img src="./assets/img/h13.png" alt="organizer"
@@ -142,6 +142,7 @@
           </div>
           <span>Ugmonk</span>
         </div>
+
         <div class="canteen">
           <a href="https://amzn.to/2G84CiT"
             ><img src="./assets/img/h8.png" alt="canteen"
@@ -152,6 +153,7 @@
           </div>
           <span>Corkcicle.</span>
         </div>
+
         <div class="chair">
           <a href="https://amzn.to/2YWPz3N"
             ><img src="./assets/img/h2.png" alt="chair"
@@ -162,6 +164,7 @@
           </div>
           <span>Herman Miller</span>
         </div>
+
         <div class="notebook">
           <a href="https://amzn.to/2KhwTsz"
             ><img src="./assets/img/d5.png" alt="notebook"
@@ -172,6 +175,7 @@
           </div>
           <span>Field Notes</span>
         </div>
+
         <div class="japan">
           <a
             href="https://www.bookdepository.com/From-Japan/9780957081659?a_aid=1991"
@@ -183,6 +187,7 @@
           </div>
           <span>Counter Print</span>
         </div>
+
         <div class="deskLamp">
           <a href="http://www.grupaproducts.com/arigato/"
             ><img src="./assets/img/h6.png" alt="deskLamp"
@@ -193,6 +198,7 @@
           </div>
           <span>Grupa</span>
         </div>
+
         <div class="regalWatch">
           <a href="https://amzn.to/2CZiPxO"
             ><img src="./assets/img/u7.png" alt="Watch"
@@ -203,6 +209,7 @@
           </div>
           <span>Komano</span>
         </div>
+
         <div class="Poster">
           <a href="https://heyshop.es/collections/home/products/h-hey"
             ><img src="./assets/img/d4.png" alt="Poster"
@@ -213,6 +220,7 @@
           </div>
           <span>Hey Studio</span>
         </div>
+
         <div class="coffeeCan">
           <a href="https://amzn.to/2UGLHEQ"
             ><img src="./assets/img/u11.png" alt="coffeeCan"
@@ -223,6 +231,7 @@
           </div>
           <span>Blue Bottle Company</span>
         </div>
+
         <div class="beoplay">
           <a href="https://amzn.to/2UFjEWp"
             ><img src="./assets/img/h9.png" alt="beoplay"
@@ -233,6 +242,7 @@
           </div>
           <span>Bang & Olufsen</span>
         </div>
+
         <div class="makeItNow">
           <a href="https://amzn.to/2OTHEQg"
             ><img src="./assets/img/p2.png" alt="makeItNow"
@@ -243,6 +253,7 @@
           </div>
           <span>Anthony Burrill</span>
         </div>
+
         <div class="sideChair">
           <a href="https://amzn.to/2UFHfGt"
             ><img src="./assets/img/h4.png" alt="sideChair"
@@ -253,6 +264,7 @@
           </div>
           <span>Eames Style</span>
         </div>
+
         <div class="graphicDesign">
           <a href="https://amzn.to/2Ij1IKA"
             ><img src="./assets/img/c22.png" alt="graphicDesign"
@@ -263,6 +275,7 @@
           </div>
           <span>Thames & Hudson</span>
         </div>
+
         <div class="gridSystem">
           <a href="https://amzn.to/2Ij1IKA"
             ><img src="./assets/img/c1.png" alt="gridSystem"
@@ -273,6 +286,7 @@
           </div>
           <span>Josef Müller-Brockmann</span>
         </div>
+
         <div class="cardWallet">
           <a href="https://amzn.to/2I5vxiq"
             ><img src="./assets/img/u12.png" alt="wallet"
@@ -283,6 +297,7 @@
           </div>
           <span>Herschel</span>
         </div>
+
         <div class="printBlack">
           <a
             href="https://goodfuckingdesignadvice.com/products/classic-advice-print"
@@ -294,6 +309,7 @@
           </div>
           <span>Good Fucking Design Adivce</span>
         </div>
+
         <div class="magicMouse">
           <a href="https://amzn.to/2D3yZWX"
             ><img src="./assets/img/life-15.png" alt="mouse"
@@ -304,6 +320,7 @@
           </div>
           <span>Apple</span>
         </div>
+
         <div class="travelTumbler">
           <a href="https://amzn.to/2WTbsPL"
             ><img src="./assets/img/life-17.png" alt="tumbler"
@@ -314,6 +331,7 @@
           </div>
           <span>Kinto</span>
         </div>
+
         <div class="magicKeyboard">
           <a href="https://amzn.to/2GbCf4A"
             ><img src="./assets/img/life-16.png" alt="keyboard"
@@ -324,6 +342,7 @@
           </div>
           <span>Apple</span>
         </div>
+
         <div class="bottleGrinder">
           <a href="https://amzn.to/2WMJbdy"
             ><img src="./assets/img/u8.png" alt="bottleGrinder"
@@ -334,6 +353,7 @@
           </div>
           <span>Menu</span>
         </div>
+
         <div class="geoThermos">
           <a href="https://amzn.to/2JLtxvk"
             ><img src="./assets/img/home-8.png" alt="thermos"
@@ -344,6 +364,7 @@
           </div>
           <span>Normann Copenhagen</span>
         </div>
+
         <div class="Ottoman">
           <a href="https://amzn.to/2YdSBPy"
             ><img src="./assets/img/home-10.png" alt="ottoman"
@@ -354,6 +375,7 @@
           </div>
           <span>Kardiel</span>
         </div>
+
         <div class="glassCarafe">
           <a href="https://amzn.to/2LCEfGP"
             ><img src="./assets/img/home-9.png" alt="glassCarafe"
@@ -365,7 +387,8 @@
           <span>Soma</span>
         </div>
       </section>
-      <section id="contact" class="hide">
+
+      <section id="contact" class="contactShow">
         <h2>Any questions regarding our products?</h2>
         <p>Fill out this form and we will get back to you in the next day.</p>
         <div>
@@ -381,18 +404,25 @@
             id="email"
             placeholder="Your Email"
           />
-          <textarea name="message" id="message" cols="30" rows="10"></textarea>
+          <textarea
+            name="message"
+            id="message"
+            cols="30"
+            rows="10"
+            style="text-align: left"
+          ></textarea>
         </div>
         <button onclick="sendMessage()">Send</button>
       </section>
-      <article id="messageSent" class="hide">
+
+      <article id="messageSent" class="contactShow2">
         <h2>Thanks, we've received your message!</h2>
         <p>We'll get back to you in the next 24 hours.</p>
-        <!-- <p>Confirm to receive our newest news(?!)</p> -->
         <button onclick="closeWindow()">Close</button>
       </article>
     </main>
-    <footer id="footer">
+
+    <footer>
       <!-- ITS JUST A JOKE BRO -->
       <div class="tableColumn">
         <table>
@@ -425,6 +455,7 @@
         </table>
       </div>
       <!-- PLEASE DON'T TASE ME BRO -->
+
       <section class="gridSectionTwo">
         <div>
           <h2>The Design Shop</h2>
@@ -433,16 +464,19 @@
             <strong>Ruby Bacanovic</strong>.
           </p>
         </div>
+
         <div class="footerPadding">
           <h2>Contact</h2>
           <p><a href="mailto:super@super.de">Email us</a></p>
           <p>Work with us</p>
         </div>
+
         <div>
           <h2>Newsletter</h2>
           <p>Click here to <a href="">subscribe</a>.</p>
           <p><i>Don't worry. We hate spam too.</i></p>
         </div>
+
         <div class="footerPadding">
           <h2>Find Us Here</h2>
           <p>Facebook</p>
@@ -450,6 +484,7 @@
           <p>Twitter</p>
         </div>
       </section>
+
       <nav>
         <ul>
           <li>© 2019 The Design Shop</li>
@@ -457,6 +492,7 @@
         </ul>
       </nav>
     </footer>
+
     <script src="./assets/js/main.js"></script>
   </body>
 </html>

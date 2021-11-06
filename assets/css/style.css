@@ -22,6 +22,11 @@ img:hover{
     display:none;
 }
 
+a{
+    text-decoration: none;
+    color: #000;
+}
+
 /* ==== HEADER ==== */
 
 header nav{
@@ -43,7 +48,7 @@ header nav ul{
     padding-right: 2%;
 }
 
-header nav ul li{
+header nav ul li, header nav ul a{
     padding: 2%;
 }
 
@@ -52,7 +57,7 @@ header nav ul li:hover, header nav h2:hover{
     cursor: pointer;
 }
 
-/* ==== MAIN ==== */
+/* ==== MAIN // GRID ==== */
 
 .gridSection{
     display: grid;
@@ -115,19 +120,30 @@ footer nav ul li:nth-of-type(1){
     padding: 0 1% 0 0;
 }
 
-footer a{
-    text-decoration: none;
-    color: #000;
+/* ==== MOBILE MENU ==== */
+
+.rotate{
+    transition: all .5s linear;
 }
 
-/* ==== HAMBURGER MENU ==== */
+.down{
+    transform: rotate(-90deg);
+    margin-right: 10px;
+}
 
-.hamburgerMenu{
+#mobileMenu{
     display: none;
 }
 
-.overlay{
-    display: none;
+.show{
+    overflow: hidden;
+    max-height: 0;
+    opacity: 0;
+}
+
+.transition{
+    max-height: 100vh;
+    opacity: 1;
 }
 
 /* ==== CONTACT ==== */
@@ -202,17 +218,20 @@ footer a{
     transition: .2s linear;
 }
 
-.hide{
-    display: none;
+.contactShow{
+    display:none;
 }
 
-.show{
-    display: visible;
+.contactShow2{
+    display:none;
 }
 
 /* Mediaqueries */
 
 @media only screen and (max-width: 600px){
+    header{
+        padding: 0 0 3% 0;
+    }
     .gridSection{
         display: grid;
         grid-template-columns: 1fr;
@@ -235,55 +254,47 @@ footer a{
     .footerPadding{
         padding: 0 0 0 35%;
     }
-    /* Mobile Menu */
-    header nav ul{
-        display: none;
-    }
-    .hamburgerMenu{
-        display: block;
-    }
-    .hamburgerMenu span{
-        display: block;
-        height: 5px;
-        width: 30px;
-        margin: 5px 30px 5px 5px;
-        background-color: black;
-    }
-    header{
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-    }
-    header h2{
-        width: 300px;
-    }
-    .overlay{
-        position: absolute;
-        width: 100%;
-        top: 0;
-        bottom: 0;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        background:silver;
-        height: 0%;
-        opacity: 0;
-        transition: 0.5s ease;
-    }
-    .overlay ul{
-        text-align: center;
-        list-style: none;
-    }
-    .overlay ul li{
-        margin: 20px 0;
-        font-size: 38px;
-        padding: 2% 0;
-    }
+    
     #contact{
         margin: 0 10%;
         padding: 0 0 3% 0;
     }
     #messageSent{
         margin: 10% 3%;
+    }
+    /* Mobile Menu */
+    #desktopHeader{
+        display: none;
+    }
+    #mobileMenuList{
+        flex-direction: column;
+        align-items: flex-end;
+        padding: 0 5.5% 0 0;
+        transition: 1s linear;
+    }
+    #mobileMenuList a{
+        transition: all 1s;
+    }
+    #mobileMenu{
+        padding: 0 4% 0 0;
+        display: flex;
+    }
+}
+
+@media only screen and (max-width: 300px){
+    .gridSectionTwo{
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 25px;
+        margin: 2% 5%;
+        padding: 3% 0 0 0;
+        border-top: 1px solid #666;
+    }
+    .footerPadding{
+        padding: 0 0 0 0%;
+    }
+    footer nav ul{
+        flex-wrap: wrap;
+        justify-content: center;
     }
 }
