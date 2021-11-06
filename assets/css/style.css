@@ -10,23 +10,14 @@
 
 /* ==== Allgemein ==== */
 
-img{
-    width: 100%;
-    transition: 2s ease;
-}
-
-img:hover{
-    transition: 2s ease;
-    opacity: .5;
-}
-
-.gridSectionTwo{
-    display:none;
-}
-
 a{
     text-decoration: none;
     color: #000;
+}
+
+.flex-jc-sb{
+    display: flex;
+    justify-content: space-between;
 }
 
 /* ==== HEADER ==== */
@@ -50,11 +41,11 @@ header nav ul{
     padding-right: 2%;
 }
 
-header nav ul li, header nav ul a{
+header nav ul li{
     padding: 2%;
 }
 
-header nav ul li:hover, header nav h2:hover{
+header nav ul li:hover, header nav h2:hover, a:hover{
     color: #999;
     cursor: pointer;
 }
@@ -72,19 +63,27 @@ header nav ul li:hover, header nav h2:hover{
     grid-column: 1/4;
 }
 
-.flex{
-    display: flex;
-    justify-content: space-between;
-}
-
-main p{
+.gridSection p{
     color: rgb(49,57,70);
 }
 
-main span{
+.gridSection span{
     color: rgb(170,170,170);
 }
 
+.gridSection img{
+    width: 100%;
+    transition: 2s ease;
+}
+
+.gridSection img:hover{
+    transition: 2s ease;
+    opacity: .5;
+}
+
+.gridSectionTwo{
+    display:none;
+}
 
 /* ==== FOOTER ==== */
 
@@ -127,6 +126,13 @@ footer nav ul li:nth-of-type(1){
 }
 
 /* ==== MOBILE MENU ==== */
+/* it's off by default in desktop mode */
+
+#mobileMenu{
+    display: none;
+}
+
+/* rotation of the icon */
 
 .rotate{
     transition: all .5s linear;
@@ -134,12 +140,12 @@ footer nav ul li:nth-of-type(1){
 
 .down{
     transform: rotate(-90deg);
+    /* margin is needed */
     margin-right: 10px;
+    margin-bottom: 10px;
 }
 
-#mobileMenu{
-    display: none;
-}
+/* ======================= */
 
 .show{
     overflow: hidden;
@@ -153,6 +159,12 @@ footer nav ul li:nth-of-type(1){
 }
 
 /* ==== CONTACT ==== */
+/* FIRST FORM */
+/* opens after interaction */
+
+.contactShow{
+    display:none;
+}
 
 #contact{
     text-align: center;
@@ -198,6 +210,13 @@ footer nav ul li:nth-of-type(1){
     transition: .2s linear;
 }
 
+/* SECOND FORM */
+/* opens after form has been sent */
+
+.contactShow2{
+    display:none;
+}
+
 #messageSent{
     text-align: center;
     border: 1px solid black;
@@ -222,14 +241,6 @@ footer nav ul li:nth-of-type(1){
     background-color: black;
     color: #fff;
     transition: .2s linear;
-}
-
-.contactShow{
-    display:none;
-}
-
-.contactShow2{
-    display:none;
 }
 
 /* Mediaqueries */
@@ -260,7 +271,6 @@ footer nav ul li:nth-of-type(1){
     .footerPadding{
         padding: 0 0 0 35%;
     }
-    
     #contact{
         margin: 0 10%;
         padding: 0 0 3% 0;

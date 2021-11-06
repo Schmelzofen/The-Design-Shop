@@ -3,6 +3,9 @@ let mobileMenuList = document.getElementById("mobileMenuList")
 let contact = document.getElementById("contact")
 let messageSent = document.getElementById("messageSent")
 
+/* Ich wollte gewährleisten, das die Forms nicht koexistieren können, deshalb soviel toggle/remove/add - das geht wahrscheinlich effektiver, aber ich hab es nicht hingekriegt */
+
+
 function toggleMenu(){
     mobileMenu.classList.toggle("down")
     mobileMenuList.classList.toggle("show")
